@@ -3,26 +3,20 @@ import Footer from "./Footer";
 import Main from "./Main";
 
 const Home = () => {
-    const nombre = "Agustin Chazarreta Cruz";
-    const titulo = "Tecnico Universitario en Programacion";
-    const secundaria = "Colegio Ntra. Señora de la Consolacion";
-    const sobre_mi = "Soy estudiante y me gusta mucho el futbol";
-    const tecnologiasYhabilidades = ["phyton , java "];
-    const otros = "Celular: 3865 636206";
+    const informacion = {
+    nombre: "Agustin Chazarreta Cruz",
+    titulo: "Tecnico Universitario en Programacion",
+    secundaria: "Colegio Ntra. Señora de la Consolacion",
+    sobre_mi: "Soy estudiante y me gusta mucho el futbol",
+    tecnologiasYhabilidades: ["phyton , java "],
+    otros: "Celular: 3865 636206",
+    };
     return (
-    <>
         <div className="text-center">
-        <Header nombre={nombre} />
-        <Main
-            titulo={titulo}
-            nombre={nombre}
-            secundaria={secundaria}
-            Algo_de_mi={sobre_mi}
-            Tecnologia_y_Habilidades={tecnologiasYhabilidades}
-        />
-        <Footer otros={otros} />
+        <Header nombre={informacion.nombre} />
+        <Main informacion={informacion} />
+        <Footer otros={informacion.otros} />
         </div>
-    </>
     );
 };
 export default Home;

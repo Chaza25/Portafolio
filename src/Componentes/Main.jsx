@@ -1,49 +1,42 @@
-import { useState } from "react"
-import "./Main.css"
+import { useState } from "react";
+import "./Main.css";
 
-const Main = ({titulo,nombre, secundaria, Algo_de_mi, Tecnologia_y_Habilidades}) => {
+const Main = ({ informacion }) => {
+  const [mostrar, setMostrar] = useState(false);
 
-const [mostrar, setMostrar] = useState(false)
-const mostrarTodo = () => {
-    setMostrar(true)
-    }
-    const ocultar= () => {
-    setMostrar(false)
-    }
-    
-    return(
-    <div class="container"> 
-    <div className="card" >
-    <div>Mi nombre es :</div>
-    <h2>{nombre}</h2>
-        
-    <div>Mi Titulo de Universidad</div>
-    <h2>{titulo}</h2>
+  const mostrarTodo = () => {
+    setMostrar(!mostrar);
+  };
+  return (
+    <div class="container">
+      <div className="card">
+        <div>Mi nombre es :</div>
+        <h2>{informacion.nombre}</h2>
 
-    <div>Mi Secundaria</div>
-    <h2>{secundaria}</h2>
+        <div>Mi Titulo de Universidad</div>
+        <h2>{informacion.titulo}</h2>
 
-    <div>Actualidad</div>
-    <h3>{Algo_de_mi}</h3>
-    <h1>Tescnologia y Habilidades</h1>
-        
-<button className= "boton"onClick={mostrarTodo}>Mostrar mas</button>
-{ mostrar && Tecnologia_y_Habilidades && (
-    <> 
-    
-    <ul>
-    {Tecnologia_y_Habilidades.map((len, index) =>(
-        <li key={index}>{len}</li>
-    ))
-    }
-    </ul> 
-    <button className="boton"onClick={ocultar}>Ocultar</button>
-    
-    </>
-    )}
+        <div>Mi Secundaria</div>
+        <h2>{informacion.secundaria}</h2>
+
+        <div>Actualidad</div>
+        <h3>{informacion.Algo_de_mi}</h3>
+        <h1>Tescnologia y Habilidades</h1>
+
+        <button className="boton" onClick={mostrarTodo}>
+          Mostrar mas/Ocultar
+        </button>
+        {mostrar && (
+            <ul>
+              {informacion.tecnologiasYhabilidades.map((len, index) => (
+                <li key={index}>{len}</li>
+              ))}
+            </ul>
+            
+        )}
+      </div>
     </div>
-    </div>
+  );
+};
 
-)}
-
-export default Main
+export default Main;

@@ -1,7 +1,7 @@
 import "./Header.css"
 
 
-const Encabezado = ({nombre}) => {
+const Header = ({nombre}) => {
     return (
         <div className="Head">
             <h1>Nombre: {nombre}</h1>
@@ -10,4 +10,4 @@ const Encabezado = ({nombre}) => {
     )
 }
 
-export default Encabezado
+export default Header
