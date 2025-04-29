@@ -1,11 +1,11 @@
 import "./Footer.css"
 
-const PiePagina = ({otros}) => {
+const Footer = ({otros}) => {
     return(
         <div className="Foot">
-            <p>Numero de cel: {otros}</p>
+            <p>Numero de{otros}</p>
         </div>
     )
 }
 
-export default PiePagina
+export default Footer

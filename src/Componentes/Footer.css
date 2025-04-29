@@ -1,3 +1,26 @@
-.Foot{
-    background-color: yellow;
+.Foot {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 3px solid #00bcd4;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Foot p {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.Foot:hover {
+  background-color: #00bcd4;
+  color: #1a1a1a;
 }

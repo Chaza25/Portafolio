@@ -1,7 +1,25 @@
-.Head{
-    background-color: blue;
+.Head {
+  background-color: #00bcd4;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 3px solid #0097a7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-Header{
-    background-color: blue;
+.Head h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.Head h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.Head:hover {
+  background-color: #0097a7;
 }

@@ -7,8 +7,8 @@ const Home = () => {
     nombre: "Agustin Chazarreta Cruz",
     titulo: "Tecnico Universitario en Programacion",
     secundaria: "Colegio Ntra. Señora de la Consolacion",
-    sobre_mi: "Soy estudiante y me gusta mucho el futbol",
-    tecnologiasYhabilidades: ["phyton , java "],
+    sobre_mi: "Soy estudiante de progracion y me gusta mucho el futbol",
+    tecnologiasYhabilidades: ["HTML 5, CSS3, PYTHON, JAVA, JAVASCRIPT, PHP, REACT, MYSQL "],
     otros: "Celular: 3865 636206",
     };
     return (
